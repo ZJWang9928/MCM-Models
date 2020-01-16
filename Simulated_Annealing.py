@@ -26,7 +26,7 @@ def SA():
     T_INITIAL = 10000
     T = T_INITIAL
     T_min = 10
-    k = 50
+    k = 100
     epsilon = 0.055
     y = 0
     t = 0
@@ -47,7 +47,8 @@ def SA():
                         x = x_neighbour
         t += 1
         print('Cur Time: ', t)
-        T = T_INITIAL / (1 + t)
+        T = T_INITIAL / (1 + t)     # quick SA
+        #  T = T_INITIAL / math.log10(1 + t)   # classic SA
 
     return x, func(x)
     

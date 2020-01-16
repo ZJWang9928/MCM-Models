@@ -188,7 +188,7 @@ def main():
     optimalvalue = []
     optimalvariables = []
 
-    # 两个决策变量的上下界，多维数组之间必须加逗号
+    # 两个决策变量的上下界
     decisionVariables = [[-3.0, 12.1], [4.1, 5.8]]
     # 精度
     delta = 0.0001
@@ -196,7 +196,6 @@ def main():
     EncodeLength = getEncodeLength(decisionVariables, delta)
     # 种群数量
     initialPopuSize = 100
-    # 初始生成100个种群
     population = getinitialPopulation(sum(EncodeLength), initialPopuSize)
     # 最大进化代数
     maxgeneration = 100

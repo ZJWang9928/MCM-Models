@@ -47,6 +47,8 @@ def GRA(DataFrame):
     list_cols = [
                 str(s) for s in range(len(DataFrame.columns)) if s not in [None]
             ]
+    print(list_cols)
+    input()
     df_local = pd.DataFrame(columns=list_cols)
     for i in range(len(DataFrame.columns)):
         df_local.iloc[:, i] = GRA_ONE(DataFrame, m=i)[0]
